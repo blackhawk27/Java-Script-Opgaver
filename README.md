@@ -1,1 +1,1 @@
-# Java-Script-Opgaver
+# JavaScript-Skak-Projekt
