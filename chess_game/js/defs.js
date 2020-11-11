@@ -30,6 +30,12 @@ var COLOURS = { WHITE : 0, BLACK : 1, BOTH : 2 };
 // Hvis du vil skifte siden (side = side ^ 1;) - (side ^= 1;) det er meget let
 // 0^0 = 0 --- 1^0 = 0 --- 1^1 = 1 --- 2^0 = 0 --- 1^2 = 1
 
+var CASTLEBIT = { WKCA : 1, WQCA : 2, BKCA : 4, BQCA : 8 };
+// WKCA = White king side Castle
+// WQCA = White Queen side Castle
+// BKCA = Black King side Castle
+// BQCA = Black Queen side Castle
+
 var SQUARES = {
     // i mit array på 120 er den første linje placeret på disse felter
     A1 : 21, B1 : 22, C1 : 23, D1 : 24, E1 : 25, F1 : 26, G1 : 27, H1 : 28,

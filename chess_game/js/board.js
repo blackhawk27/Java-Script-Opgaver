@@ -10,3 +10,22 @@ At en bonde (pawn) er blevet blevet rykket og der ikke er en der har taget en br
 GameBoard.hisPly = 0; // Holder styr på alle de træk der bliver lavet i spillet, 1/2 = kun for den ene (hvid eller sort) 1 træk = 1 træk for begge
 GameBoard.ply = 0; // Antal halve træk der bliver lavet i søge træet - Det er til en feature så man kan gå et træk tilbage eller frem
 GameBoard.castlePem = 0;
+/*
+Der er mange måder at lagre data på, men jeg har valgt at bruge binær kode.
+
+WKCA = 0001
+WQCA = 0010
+BKCA = 0100
+BQCA = 1000
+
+1101 = kan WKCA, kan ikke WQCA, kan BKCA, kan BQCA
+
+hvis sort bevægede et tårn (rook), så vil =
+0101
+Det betyder at = kan WKCA, kan ikke WQCA, kan BKCA, kan ikke BQCA
+Fra venstre til højre = 8 - 4 - 2 - 1
+
+eks. 1101 = 13
+
+Dette er en måde at lave de fire castling permissions på, der er kort og elagant.
+*/
